@@ -35,9 +35,9 @@
     </div>
     <div class="container">
         <div class="starter-template" ng-controller="MainCtrl as main">
-            <ul>
+          <ul>
                 <h1>Todos</h1>
-            </ul>
+
 
             <h4>Search Todos: <input type="text" ng-model="main.searchText"> </h4>
             <li ng-repeat="n in (main.todos | filter:{text: main.searchText})">
@@ -46,6 +46,7 @@
 
                 <input type="checkbox" ng-checked="n.done" ng-click="main.markDone(n)">
             </li>
+          </ul>
             <form novalidate name="addTodo">
                 <input type="text" name="toDoList" ng-model="main.obj.newTodoText" required/>
                 <button ng-click="main.addNewTodo(main.obj, main.todos)"
